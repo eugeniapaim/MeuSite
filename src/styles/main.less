@@ -1,0 +1,160 @@
+@import "variaveis.less";
+@import "maps.less";
+
+@breakpointMobile: ~ "(max-width: 767px)";
+@breakpointTablet: ~ "(max-width: 1023px)";
+
+
+
+// Desta maneira usamos os MIXINS no LESS
+// Criamos como se fosse uma classe e depois adicionamos a classe como se fosse uma regra css com parenteses no final
+// EX: .marginbotton8()
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #colors[backgroundColor];
+    color: @corTextos;
+}
+
+li {
+    list-style: none;
+}
+
+// O MAPEAMENTO remete vagamente aos objetos em JS
+// Declaramos ele em um arquivo próprio e nele criamos os mapas
+// Dentro dos mapas podemos ter varias propriedades de um mesmo grupo
+// Ex: cores, fontes, tamanhos, etc.
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+
+    // 
+}
+
+header {
+    padding-bottom: 24px;
+
+    .profile-avatar {
+        width: 150px;
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+
+    }
+}
+
+
+.profile-bio {
+    text-align: center;
+    color: #colors[textColor];
+
+    &-name {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    &-subtitle {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    &-description {
+        font-size: 14px;
+        opacity: 70%;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 290px;
+    width: 100%;
+    margin: 0 auto;
+
+    img {
+        transition: all ease .3s;
+
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+}
+
+.knowledges {
+    .icons-knowledges{
+        max-width: 100%;
+        columns: 2 200px;
+        column-gap: 50px;
+        display: block;
+        justify-content: center;
+        .icons {
+            max-width: 300px;
+            height: 300px;
+            margin: 50px;
+            padding: 10px;
+            border: 4px solid black;
+            border-radius: 25px;
+        }
+        .icons:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.projects-list {
+    margin-top: 36px;
+
+    &-item {
+        a {
+            text-decoration: none;
+            background-color: #colors[buttonColor];
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: #colors[textButton];
+            font-weight: bold;
+            border-radius: 30px;
+            transition: all ease .3s;
+            border: 2px solid #colors[buttonColor];
+
+            &:hover {
+                color: #colors[buttonColor];
+                background-color: #colors[backgroundColor];
+                
+            }
+        }
+    }
+}
+
+// PRIMEIROS COMANDOS:
+// npm init
+// npm i --save-dev less
+
+// Para iniciar os trabalhos é necessário colocar o script do less, juntamente com a pasta src e a pasta de destino do arquivo less
+
+// Temos também que fazer a instalação do less e dos plugins, para o watch é necessário alterar o script no package.json
+
+// Para a declaração de variáveis usa-se o @ seguido do nome da variável
+
+// Para usar a variável temos que importar o arquivo onde elas se encontram com o '@import "nome-do-arquivo";'
