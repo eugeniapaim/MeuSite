@@ -51,14 +51,14 @@ li {
 }
 
 header {
-    padding-bottom: 24px;
+    padding: 24px 0;
 
     .profile-avatar {
+        margin-top: 30px;
         width: 150px;
         display: block;
         margin: 0 auto 24px;
         border-radius: 50%;
-
     }
 }
 
@@ -91,15 +91,25 @@ header {
     margin: 0 auto;
 
     img {
-        transition: all ease .3s;
+
 
         &:hover {
             transform: scale(1.3);
+            transition: ease-in-out .3s;
         }
     }
 }
 
 .knowledges {
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        color: #colors[textColor];
+    }
+
     .icons-knowledges{
         max-width: 100%;
         columns: 2 200px;
@@ -107,11 +117,9 @@ header {
         display: block;
         justify-content: center;
         .icons {
-            max-width: 300px;
-            height: 300px;
+            max-width: 150px;
             margin: 50px;
             padding: 10px;
-            border: 4px solid black;
             border-radius: 25px;
         }
         .icons:hover {
