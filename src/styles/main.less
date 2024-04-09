@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: #colors[backgroundColor];
+    background-image: #colors[backgroundColor];
     color: @corTextos;
 }
 
@@ -92,10 +92,10 @@ header {
 
     img {
 
-
+        
+        transition: all ease .3s;
         &:hover {
             transform: scale(1.3);
-            transition: ease-in-out .3s;
         }
     }
 }
@@ -114,13 +114,15 @@ header {
         max-width: 100%;
         columns: 2 200px;
         column-gap: 50px;
-        display: block;
         justify-content: center;
         .icons {
-            max-width: 150px;
-            margin: 50px;
+            align-items: center;
+            justify-content: center;
+            max-width: 10rem;
+            margin: 25%;
             padding: 10px;
             border-radius: 25px;
+            transition: all ease .3s;
         }
         .icons:hover {
             cursor: pointer;
@@ -144,11 +146,11 @@ header {
             font-weight: bold;
             border-radius: 30px;
             transition: all ease .3s;
-            border: 2px solid #colors[buttonColor];
 
             &:hover {
-                color: #colors[buttonColor];
-                background-color: #colors[backgroundColor];
+                transform: scale(1.1);
+                color: #colors[textButton];
+                background-image: (#colors[backgroundTrans]);
                 
             }
         }
