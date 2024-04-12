@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "M PLUS 1 Code", monospace;
 }
 
 body {
@@ -53,7 +53,7 @@ li {
 header {
     padding: 24px 0;
 
-    .profile-avatar {
+    .perfil-avatar {
         margin-top: 30px;
         width: 150px;
         display: block;
@@ -63,28 +63,28 @@ header {
 }
 
 
-.profile-bio {
+.perfil-bio {
     text-align: center;
     color: #colors[textColor];
 
-    &-name {
+    h1 {
         font-size: 16px;
         margin-bottom: 8px;
     }
 
-    &-subtitle {
+    h2 {
         font-size: 14px;
         margin-bottom: 8px;
     }
 
-    &-description {
+    p {
         font-size: 14px;
         opacity: 70%;
     }
 }
 
 
-.knowledges {
+.conhecimentos {
     display: flex;
     flex-wrap: wrap;
     
@@ -94,13 +94,13 @@ header {
         color: #colors[textColor];
     }
     
-    .icons-knowledges{
+    .conhecimentos-icones{
         max-width: 100%;
         columns: 2 200px;
         column-gap: 50px;
         justify-content: center;
         align-items: center;
-        .icons {
+        .icones {
             // flex-direction: column;
             max-width: 10rem;
             margin: 30px 25% ;
@@ -109,7 +109,7 @@ header {
             border-radius: 25px;
             transition: all ease .3s;
         }
-        .icons:hover {
+        .icones:hover {
             cursor: pointer;
             transform: scale(1.1);
         }
@@ -132,7 +132,7 @@ header {
     }
 }
 
-.projects-list {
+.lista-projetos {
     margin-top: 36px;
 
     &-item {
@@ -151,7 +151,7 @@ header {
             &:hover {
                 transform: scale(1.1);
                 color: #colors[textButton];
-                background-image: (#colors[backgroundTrans]);
+                background-image: #colors[backgroundTrans];
                 
             }
         }
